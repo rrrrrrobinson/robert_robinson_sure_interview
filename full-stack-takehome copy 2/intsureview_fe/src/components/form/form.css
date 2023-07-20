@@ -1,0 +1,35 @@
+.formFields {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 85px;
+}
+
+/* create a grid to house the four ingredient fields */
+.ingredientGrid {
+    display: grid;
+    grid-template-rows: 55px 55px;
+    grid-template-columns: 150px 150px;
+    gap: 10px;
+}
+
+/* lettuce tomato and onion styling */
+.ltoOptions {
+    display: flex;
+    justify-content: right;
+    width: 308px;
+    border-style: solid;
+    border-color: #c4c4c4;
+    border-radius: 4px;
+    margin-top: 20px;
+    border-width: thin;
+}
+
+/* adds the red border around the upload selection box */
+.uploadError {
+    border-style: solid;
+    border-color: rgba(255, 0, 0, 0);
+    border-width: thin;
+    border-radius: 5px;
+}

@@ -28,6 +28,13 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+#whitelist the localhosts for cors
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+    'http://localhost:8000',
+)
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,10 +45,15 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "intsureview_be.apps.api",
+    "corsheaders",
+    "Burger.apps.BurgerConfig"
+
 ]
 
+#updated settings to include corsheaders
+
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",

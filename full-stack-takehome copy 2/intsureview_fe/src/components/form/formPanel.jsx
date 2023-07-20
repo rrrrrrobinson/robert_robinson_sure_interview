@@ -100,7 +100,6 @@ export default function FormPanel() {
   const handleSubmitButton = () => {
     //if the user has not selected to upload data
     if (uploadData !== ("true" || "false")) {
-      console.log("upload data null");
       //add a red border around the upload selection box
       //while materialUI has a built in error style for selection boxes, it did not want to update conditionally.
       //this border is a workaround for that issue
